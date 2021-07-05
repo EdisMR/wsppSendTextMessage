@@ -20,10 +20,10 @@
 				<li>The first element in the Array is the phone number where you will send the message</li>
 				<li>Each element of the Array is a line of the Whatsapp text message</li>
 				<li>You can use the simbols you use in the app, to format the text, for example *bold* or _italic_</li>
-				<li>When you have the complete data in the Array, you are ready to call wsppSendTextMessage(data) with your Array as the first parameter</li>
+				<li>When you have the complete data in the Array, you are ready to call <code class="code">wsppSendTextMessage(data)</code> with your Array as the first parameter</li>
 				<li>The wsppSendTextMessage function ever return the processed string (the generated link to open Whatsapp)</li>
 				<li>By default the wsppSendTextMessage function open a new window with the generated URL</li>
-				<li>The function open the Whatsapp chat and return the processed string, but to return only the string you have to add a second parameter with the value "false". Example: <code class="code">wsppSendTextMessage(data,false)</code></li>
+				<li>The function open the Whatsapp chat and return the processed string, but, to return the string without the Whatsapp chat, you have to add a second parameter with the value "false". Example: <code class="code">wsppSendTextMessage(data,false)</code></li>
 			</ol>
 			<p>
 				<span class="important">Important: </span>I'm working to support QR Whatsapp links, but actually you have to specify a phone number.
