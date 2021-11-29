@@ -60,3 +60,87 @@ code{
 .important,.important:hover{
 	color: rgb(255, 55, 55);
 }
+
+.titleExample{
+	display:block;
+	padding: 20px;
+	font-size: 20px;
+	font-weight: 700;
+
+}
+
+.exampleInput{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 100px;
+	margin-bottom: 100px;
+	input,textarea{
+		color: #333;
+	}
+	span{
+		white-space: nowrap;
+	}
+}
+
+form{
+	max-width: 400px;
+	
+}
+.msg-input,.tel-input,.name-input{
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: stretch;
+	margin-top: 20px;
+	input,textarea{
+		width: 100%;
+		&:invalid{
+			color: red;
+		}
+	}
+}
+
+.tel-input{
+
+}
+
+.name-input{
+
+}
+.msg-input{
+	textarea{
+		resize: vertical;
+		max-height: 500px;
+	}
+}
+
+.send{
+	margin-top: 20px;
+}
+
+#openurl{
+	background-color: darkcyan !important;
+	color: #eee;
+	:hover{
+		background-color: rgb(2, 212, 212);
+	}
+	:active{
+		background-color: rgb(4, 110, 110);
+	}
+}
+
+.showURL{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-bottom: 100px;
+
+}
+
+#innerGeneratedURL{
+	color: rgb(42, 253, 0);
+	padding-top: 50px;
+	padding-bottom: 50px;
+	word-break: break-all;
+	max-width: 80vw;
+}

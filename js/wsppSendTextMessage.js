@@ -8,5 +8,7 @@ function wsppSendTextMessage(source, wQ = true) {
 	if (output == true) {
 		window.open(info);
 	}
+
+	info=encodeURI(info)
 	return info;
 }
