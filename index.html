@@ -1,49 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Dynamic Tex Message Generator for Whatsapp</title>
-	<link rel="stylesheet" href="css/main.css">
-</head>
-<body>
-	<section class="container">
-		<h1>Dynamic Tex Message Generator for Whatsapp</h1>
-	</section>
-	<section class="container">
-		<article>
-			<h3>How to use:</h3>
-			<ol>
-				<li>You have to capture and validate the data in your own function</li>
-				<li>Remember link the js: <code class="code">src="wsppSendTextMessage.js"</code></li>
-				<li>You have to send the data to the wsppSendTextMessage function in an Array</li>
-				<li>The first element in the Array is the phone number where you will send the message</li>
-				<li>Each element of the Array is a line of the Whatsapp text message</li>
-				<li>You can use the simbols you use in the app, to format the text, for example *bold* or _italic_</li>
-				<li>When you have the complete data in the Array, you are ready to call <code class="code">wsppSendTextMessage(data)</code> with your Array as the first parameter</li>
-				<li>The wsppSendTextMessage function ever return the processed string (the generated link to open Whatsapp)</li>
-				<li>By default the wsppSendTextMessage function open a new window with the generated URL</li>
-				<li>The function open the Whatsapp chat and return the processed string, but, to return the string without the Whatsapp chat, you have to add a second parameter with the value "false". Example: <code class="code">wsppSendTextMessage(data,false)</code></li>
-			</ol>
-			<p>
-				<span class="important">Important: </span>I'm working to support QR Whatsapp links, but actually you have to specify a phone number.
-			</p>
-		</article>
-		<article class="container">
-			<div>Example:</div>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Dynamic Tex Message Generator for Whatsapp</title>
+		<link rel="stylesheet" href="css/main.css" />
+	</head>
+	<body>
+		<section class="container">
+			<h1>Dynamic Tex Message Generator for Whatsapp</h1>
+		</section>
+		<section class="container">
+			<article>
+				<h3>How to use:</h3>
+				<ol>
+					<li>
+						You have to capture and validate the data in your own function
+					</li>
+					<li>
+						Remember link the js:
+						<code class="code">src="wsppSendTextMessage.js"</code>
+					</li>
+					<li>
+						You have to send the data to the wsppSendTextMessage function in an
+						Array
+					</li>
+					<li>
+						The first element in the Array is the phone number where you will
+						send the message
+					</li>
+					<li>
+						Each element of the Array is a line of the Whatsapp text message
+					</li>
+					<li>
+						You can use the simbols you use in the app, to format the text, for
+						example *bold* or _italic_
+					</li>
+					<li>
+						When you have the complete data in the Array, you are ready to call
+						<code class="code">wsppSendTextMessage(data)</code> with your Array
+						as the first parameter
+					</li>
+					<li>
+						The wsppSendTextMessage function ever return the processed string
+						(the generated link to open Whatsapp)
+					</li>
+					<li>
+						By default the wsppSendTextMessage function open a new window with
+						the generated URL
+					</li>
+					<li>
+						The function open the Whatsapp chat and return the processed string,
+						but, to return the string without the Whatsapp chat, you have to add
+						a second parameter with the value "false". Example:
+						<code class="code">wsppSendTextMessage(data,false)</code>
+					</li>
+				</ol>
+				<p>
+					<span class="important">Important: </span>I'm working to support QR
+					Whatsapp links, but actually you have to specify a phone number.
+				</p>
+			</article>
+			<article class="container">
+				<div>Example:</div>
+				<div>
+					<img src="cod.webp" alt="Example code" />
+				</div>
+			</article>
+		</section>
+
+		<section class="exampleInput">
+			<span class="titleExample">Example in a form</span>
+			<form>
+				<div class="tel-input">
+					<span>Telephone to contact: &nbsp;&nbsp;</span
+					><input
+						type="tel"
+						name="telephone"
+						autocomplete="off"
+						pattern="^\+{0,1}\d{3,}$"
+						required
+						/>
+				</div>
+				<div class="name-input">
+					<span>Name: &nbsp;&nbsp;</span>
+					<input type="text" name="username" autocomplete="off" required/>
+				</div>
+				<div class="msg-input">
+					<span>Your message:&nbsp;&nbsp; </span><textarea name="message" required></textarea>
+				</div>
+				<div class="send">
+					<button id="openurl">Open chat</button>
+				</div>
+			</form>
+		</section>
+
+		<section class="showURL">
+			<div>Generated Whatsapp URL:</div>
+			<span id="innerGeneratedURL">
+			</span>
+		</section>
+
+		<footer class="container">
 			<div>
-				<img src="cod.webp" alt="Example code">
+				Created by
+				<a href="https://github.com/XitusDev" target="_blank">&#64;XitusDev</a>
 			</div>
-		</article>
-	</section>
-	<footer class="container">
-		<div>
-			Created by <a href="https://github.com/XitusDev" target="_blank">&#64;XitusDev</a>
-		</div>
-		<div>
-			<a href="https://github.com/XitusDev/wsppSendTextMessage"  target="_blank">Link to the project</a>
-		</div>
-	</footer>
-	<script src="js/wsppSendTextMessage.js"></script>
-</body>
+			<div>
+				<a
+					href="https://github.com/XitusDev/wsppSendTextMessage"
+					target="_blank"
+					>Link to the project</a
+				>
+			</div>
+		</footer>
+		<script src="js/wsppSendTextMessage.js"></script>
+		<script src="js/main.js"></script>
+	</body>
 </html>
